@@ -38,7 +38,7 @@ status = st.radio("Select client situation: ", ('new_client', 'old_client'))
 def user_input_features():
     if (status == 'new_client'):
         st.sidebar.header('New User Input Features')
-        payment_rate = st.sidebar.slider('PAYMENT_RATE', X.PAYMENT_RATE.min(), X.PAYMENT_RATE.max())
+        payment_rate = st.sidebar.slider('PAYMENT_RATE', float(X.PAYMENT_RATE.min()), float(X.PAYMENT_RATE.max()))
         days_birth = st.sidebar.slider('DAYS_BIRTH', X.DAYS_BIRTH.min(), X.DAYS_BIRTH.max())
         days_employed = st.sidebar.slider('DAYS_EMPLOYED', X.DAYS_EMPLOYED.min(), X.DAYS_EMPLOYED.max())
         amt_annuity = st.sidebar.slider('AMT_ANNUITY', X.AMT_ANNUITY.min(), X.AMT_ANNUITY.max())
