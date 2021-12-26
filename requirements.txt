@@ -18,4 +18,5 @@ matplotlib==3.5.0
 #PIL
 pickleshare==0.7.5
 pillow==8.4.0
+imbalanced-learn==0.8.1
 
