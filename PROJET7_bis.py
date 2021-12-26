@@ -19,6 +19,9 @@ st.image(img, width=200)
 data = pd.read_csv("data_model.csv")#git
 #data.index=data['SK_ID_CURR']
 #del data['SK_ID_CURR']
+# modif
+data['PAYMENT_RATE']=round(data['PAYMENT_RATE'],5)
+
 
 X = pd.DataFrame(data, columns=['PAYMENT_RATE','DAYS_BIRTH','DAYS_EMPLOYED','AMT_ANNUITY'])
 y = pd.DataFrame(data, columns = ['TARGET'])
