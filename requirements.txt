@@ -2,10 +2,10 @@
 #import numpy as np
 #import seaborn as sns
 #import matplotlib.pyplot as plt
-import pickle
+#import pickle
 import streamlit as st
 #import os
 #%matplotlib inline
 #import warnings
 #warnings.filterwarnings('ignore')
-from PIL import Image
+#from PIL import Image
