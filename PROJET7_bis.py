@@ -39,9 +39,9 @@ def user_input_features():
     if (status == 'new_client'):
         st.sidebar.header('New User Input Features')
         payment_rate = st.sidebar.slider('PAYMENT_RATE', float(X.PAYMENT_RATE.min()), float(X.PAYMENT_RATE.max()))
-        days_birth = st.sidebar.slider('DAYS_BIRTH', X.DAYS_BIRTH.min(), X.DAYS_BIRTH.max())
-        days_employed = st.sidebar.slider('DAYS_EMPLOYED', X.DAYS_EMPLOYED.min(), X.DAYS_EMPLOYED.max())
-        amt_annuity = st.sidebar.slider('AMT_ANNUITY', X.AMT_ANNUITY.min(), X.AMT_ANNUITY.max())
+        days_birth = st.sidebar.slider('DAYS_BIRTH', float(X.DAYS_BIRTH.min()), float(X.DAYS_BIRTH.max()))
+        days_employed = st.sidebar.slider('DAYS_EMPLOYED', float(X.DAYS_EMPLOYED.min()),float( X.DAYS_EMPLOYED.max()))
+        amt_annuity = st.sidebar.slider('AMT_ANNUITY', float(X.AMT_ANNUITY.min()), float(X.AMT_ANNUITY.max()))
         df = {'PAYMENT_RATE': payment_rate,
             'DAYS_BIRTH': days_birth,
             'DAYS_EMPLOYED': days_employed,
