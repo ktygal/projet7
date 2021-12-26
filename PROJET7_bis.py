@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import seaborn as sns
+#import seaborn as sns
 import matplotlib.pyplot as plt
 import pickle
 import streamlit as st
@@ -89,9 +89,9 @@ st.subheader('Visualisation Prediction Probability')
 a = prediction_proba[0,0]
 b =prediction_proba[0,1]
 x = [a, b]
-colors = sns.dark_palette("palegoldenrod", 8, reverse=True) #skyblue
+colors = seaborn.dark_palette("palegoldenrod", 8, reverse=True) #skyblue
 fig, ax = plt.subplots(figsize=(10, 4))
-colors = sns.color_palette("Paired")
+colors = seaborn.color_palette("Paired")
 labels= ['Solvable','Non Solvable']
 plt.title("Visualisation des prédictions")
 plt.pie(x, labels= labels,colors=colors, autopct='%1.1f%%', startangle=90, shadow=True)
@@ -106,10 +106,10 @@ data_non = data[data['TARGET']==1]
 data_solvable=data[data['TARGET']==0]
 client = input_df['DAYS_EMPLOYED']
 fig, ax = plt.subplots(figsize=(14, 6))
-plt.subplot(2, 1, 1); sns.distplot(data_solvable.DAYS_EMPLOYED, label = 'DAYS_EMPLOYED')
+plt.subplot(2, 1, 1); seaborn.distplot(data_solvable.DAYS_EMPLOYED, label = 'DAYS_EMPLOYED')
 plt.text(client,0.00005,"X client")
 plt.title("Distribution de DAYS_EMPLOYED des clients solvable")
-plt.subplot(2, 1, 2); sns.distplot(data_non.DAYS_EMPLOYED, label = 'DAYS_EMPLOYED')
+plt.subplot(2, 1, 2); seaborn.distplot(data_non.DAYS_EMPLOYED, label = 'DAYS_EMPLOYED')
 plt.text(client,0.00005,"X client")
 plt.title("Distribution de DAYS_EMPLOYED des clients non solvable")
 plt.tight_layout()
@@ -118,10 +118,10 @@ st.write(fig)
 
 fig2, ax = plt.subplots(figsize=(14, 6))
 client = input_df['AMT_ANNUITY']
-plt.subplot(2, 1, 1); sns.distplot(data_solvable.AMT_ANNUITY, label = 'AMT_ANNUITY')
+plt.subplot(2, 1, 1); seaborn.distplot(data_solvable.AMT_ANNUITY, label = 'AMT_ANNUITY')
 plt.text(client,0.00001,"X client")
 plt.title("Distribution de AMT_ANNUITY des clients solvable")
-plt.subplot(2, 1, 2); sns.distplot(data_non.AMT_ANNUITY, label = 'AMT_ANNUITY')
+plt.subplot(2, 1, 2); seaborn.distplot(data_non.AMT_ANNUITY, label = 'AMT_ANNUITY')
 plt.text(client,0.00001,"X client")
 plt.title("Distribution de AMT_ANNUITY des clients non solvable")
 plt.tight_layout()
