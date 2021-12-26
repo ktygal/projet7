@@ -4,9 +4,15 @@
 #import matplotlib.pyplot as plt
 #import pickle
 #import streamlit as st
-streamlit
 #import os
 #%matplotlib inline
 #import warnings
 #warnings.filterwarnings('ignore')
 #from PIL import Image
+streamlit
+pandas
+numpy
+seaborn
+matplotlib
+pickle
+PIL
