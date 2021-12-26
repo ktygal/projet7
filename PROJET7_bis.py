@@ -4,9 +4,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import pickle
 import streamlit as st
-%matplotlib inline
-import warnings
-warnings.filterwarnings('ignore')
+#%matplotlib inline
+#import warnings
+#warnings.filterwarnings('ignore')
 ####
 from PIL import Image
 #chemin = 'C:\Users\katyg\Desktop\OPENCLASSROOMS\DATASCIENTISTE\Projet7'
